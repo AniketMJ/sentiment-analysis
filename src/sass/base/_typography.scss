@@ -1,0 +1,24 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+@each $screen-size, $font-prop in var.$type-scale {
+  @if $screen-size == "desktop" {
+    @each $size-name, $properties in $font-prop {
+      .#{$size-name} {
+        @each $prop, $value in $properties {
+          #{$prop}: #{$value};
+        }
+      }
+    }
+  } @else if $screen-size == "tablet" {
+    @include mix.respond-to("large") {
+      @each $size-name, $properties in $font-prop {
+        .#{$size-name} {
+          @each $prop, $value in $properties {
+            #{$prop}: #{$value};
+          }
+        }
+      }
+    }
+  }
+}

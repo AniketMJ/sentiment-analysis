@@ -1,0 +1,52 @@
+@use "../abstracts/variables" as var;
+
+// ----------------------Fonts
+@font-face {
+  font-family: "JT Douro-Serif";
+  src: local("JT Douro-Serif Regular"), local("JTDouro-Serif-Regular"),
+    url("/assets/fonts/jt-douro-serif/JTDouro-Serif-Regular.woff2")
+      format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "JT Douro-Serif";
+  src: local("JT Douro-Serif Bold"), local("JTDouro-Serif-Bold"),
+    url("/assets/fonts/jt-douro-serif/JTDouro-Serif-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "JT Douro-Serif";
+  src: local("JT Douro-Serif Light"), local("JTDouro-Serif-Light"),
+    url("/assets/fonts/jt-douro-serif/JTDouro-Serif-Light.woff2")
+      format("woff2");
+  font-weight: lighter;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Oblik";
+  src: local("OblikW01-Regular"), local("Oblik W01 Regular"),
+    url("/assets/fonts/oblik/Oblik\ W01\ Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Oblik";
+  src: local("OblikW01-Bold"), local("Oblik W01 Bold"),
+    url("/assets/fonts/oblik/Oblik\ W01\ Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+// ----------------------Colors
+:root {
+  @each $color, $shades in var.$colors {
+    @each $prop, $value in $shades {
+      --clr-#{$color}-#{$prop}: #{$value};
+    }
+  }
+}

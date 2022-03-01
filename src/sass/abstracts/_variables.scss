@@ -1,7 +1,165 @@
-/* Breakpoints */
+@use "../abstracts/functions" as func;
+
+// ----------------------Breakpoints
 $breakpoints: (
   "small": 600px,
   "medium": 900px,
   "large": 1200px,
   "very-large": 1800px,
+);
+
+// ----------------------Typography
+$base-font-size: 16;
+$primary-font: "JT Douro-Serif";
+$secondary-font: "Oblik";
+
+$type-scale: (
+  desktop: (
+    h1: (
+      font-family: $primary-font,
+      font-size: func.px-to-rem(77),
+      font-weight: "bold",
+      line-height: 99.5%,
+    ),
+    h2: (
+      font-family: $primary-font,
+      font-size: func.px-to-rem(56),
+      font-weight: normal,
+      line-height: 109%,
+      letter-spacing: 0.5px,
+    ),
+    h3-jt: (
+      font-family: $primary-font,
+      font-size: func.px-to-rem(36),
+      font-weight: lighter,
+      line-height: 110%,
+      letter-spacing: 0.5px,
+    ),
+    h3-oblik: (
+      font-family: $secondary-font,
+      font-size: func.px-to-rem(38),
+      font-weight: bold,
+      line-height: 137%,
+      letter-spacing: 0.5px,
+    ),
+    h4-logo: (
+      font-family: $secondary-font,
+      font-size: func.px-to-rem(28),
+      font-weight: bold,
+      line-height: auto,
+      letter-spacing: 0.5px,
+    ),
+    p1: (
+      font-family: $secondary-font,
+      font-size: func.px-to-rem(24),
+      font-weight: normal,
+      line-height: 149%,
+      letter-spacing: 0.2px,
+    ),
+    p1-bold: (
+      font-family: $secondary-font,
+      font-size: func.px-to-rem(24),
+      font-weight: bold,
+      line-height: 149%,
+      letter-spacing: 0.2px,
+    ),
+    p2: (
+      font-family: $secondary-font,
+      font-size: func.px-to-rem(20),
+      font-weight: normal,
+      line-height: 142.5%,
+      letter-spacing: 0.2px,
+    ),
+    p3: (
+      font-family: $secondary-font,
+      font-size: func.px-to-rem(18),
+      font-weight: normal,
+      line-height: 145%,
+      letter-spacing: 0.2px,
+    ),
+    btns: (
+      font-family: $secondary-font,
+      font-size: func.px-to-rem(18),
+      font-weight: bold,
+      line-height: auto,
+      letter-spacing: 0.5px,
+    ),
+    links: (
+      font-family: $secondary-font,
+      font-size: func.px-to-rem(18),
+      font-weight: normal,
+      line-height: auto,
+      letter-spacing: 0.2px,
+    ),
+  ),
+);
+
+// ----------------------Colors
+$colors: (
+  primary: (
+    100: hsla(200, 80%, 95%, 1),
+    200: hsla(203, 74%, 86%, 1),
+    300: hsla(205, 75%, 78%, 1),
+    400: hsla(208, 75%, 68%, 1),
+    500: hsla(210, 70%, 50%, 1),
+    600: hsla(212, 80%, 45%, 1),
+    700: hsla(216, 82%, 35%, 1),
+    800: hsla(218, 90%, 30%, 1),
+    900: hsla(220, 95%, 20%, 1),
+  ),
+  secondary: (
+    100: hsla(235, 75%, 94%, 1),
+    200: hsla(237, 66%, 88%, 1),
+    300: hsla(240, 70%, 85%, 1),
+    400: hsla(242, 66%, 78%, 1),
+    500: hsla(245, 63%, 66%, 1),
+    600: hsla(246, 65%, 57%, 1),
+    700: hsla(248, 65%, 50%, 1),
+    800: hsla(248, 75%, 40%, 1),
+    900: hsla(252, 85%, 25%, 1),
+  ),
+  accent: (
+    100: hsla(334, 90%, 95%, 1),
+    200: hsla(334, 80%, 92%, 1),
+    300: hsla(336, 72%, 86%, 1),
+    400: hsla(336, 76%, 74%, 1),
+    500: hsla(336, 80%, 50%, 1),
+    600: hsla(336, 86%, 46%, 1),
+    700: hsla(338, 86%, 44%, 1),
+    800: hsla(338, 88%, 38%, 1),
+    900: hsla(338, 90%, 32%, 1),
+  ),
+  neutral-grey: (
+    100: hsla(198, 28%, 95%, 1),
+    200: hsla(198, 26%, 88%, 1),
+    300: hsla(200, 26%, 80%, 1),
+    400: hsla(203, 30%, 74%, 1),
+    500: hsla(205, 30%, 55%, 1),
+    600: hsla(208, 38%, 46%, 1),
+    700: hsla(210, 40%, 40%, 1),
+    800: hsla(212, 38%, 30%, 1),
+    900: hsla(216, 55%, 22%, 1),
+  ),
+  neutral-teal: (
+    100: hsla(195, 80%, 92%, 1),
+    200: hsla(195, 75%, 85%, 1),
+    300: hsla(196, 80%, 80%, 1),
+    400: hsla(198, 75%, 70%, 1),
+    500: hsla(198, 70%, 35%, 1),
+    600: hsla(205, 82%, 32%, 1),
+    700: hsla(205, 82%, 32%, 1),
+    800: hsla(206, 80%, 28%, 1),
+    900: hsla(210, 90%, 20%, 1),
+  ),
+  neutral-yellow: (
+    100: hsla(50, 80%, 90%, 1),
+    200: hsla(50, 75%, 80%, 1),
+    300: hsla(52, 70%, 70%, 1),
+    400: hsla(50, 75%, 62%, 1),
+    500: hsla(52, 70%, 50%, 1),
+    600: hsla(50, 76%, 45%, 1),
+    700: hsla(48, 78%, 40%, 1),
+    800: hsla(46, 83%, 32%, 1),
+    900: hsla(45, 86%, 20%, 1),
+  ),
 );

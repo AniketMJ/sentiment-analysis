@@ -9,7 +9,7 @@
 /* Media query mixins */
 @mixin respond-to($breakpoint) {
   @if map-has-key(var.$breakpoints, $breakpoint) {
-    @media (min-width: map-get(var.$breakpoints, $breakpoint)) {
+    @media (max-width: map-get(var.$breakpoints, $breakpoint)) {
       @content;
     }
   } @else {
