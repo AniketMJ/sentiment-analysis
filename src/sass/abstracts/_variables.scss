@@ -1,5 +1,12 @@
 @use "../abstracts/functions" as func;
 
+// ----------------------General
+$border-radius: (
+  large: func.px-to-rem(10),
+  normal: func.px-to-rem(4),
+  small: func.px-to-rem(2),
+);
+
 // ----------------------Breakpoints
 $breakpoints: (
   "small": 600px,

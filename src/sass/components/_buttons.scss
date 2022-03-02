@@ -1,0 +1,21 @@
+@use "../abstracts/functions" as func;
+@use "../abstracts/variables" as var;
+
+.button {
+  display: inline-block;
+  margin: 0;
+  border: 0;
+  padding: func.px-to-rem(16) func.px-to-rem(24);
+  border-radius: map-get(var.$border-radius, "normal");
+
+  &--primary {
+    @extend .button;
+    color: var(--clr-accent-100);
+    background-color: var(--clr-accent-500);
+  }
+  &--secondary {
+    @extend .button;
+    color: var(--clr-accent-500);
+    background-color: var(--clr-accent-100);
+  }
+}

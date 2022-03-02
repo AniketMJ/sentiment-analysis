@@ -1,0 +1,13 @@
+@use "../abstracts/functions" as func;
+
+header > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  nav > ul {
+    display: flex;
+    align-items: center;
+    gap: func.px-to-rem(28);
+  }
+}

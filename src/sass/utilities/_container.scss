@@ -1,0 +1,7 @@
+@use "../abstracts/functions" as func;
+
+.container {
+  max-width: 1440px;
+  padding: func.px-to-rem(24) func.px-to-rem(70);
+  margin: 0 auto;
+}

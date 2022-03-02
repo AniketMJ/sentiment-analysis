@@ -1,6 +1,7 @@
 @use "../abstracts/variables" as var;
 @use "../abstracts/mixins" as mix;
 
+// ----------------------TypeScale
 @each $screen-size, $font-prop in var.$type-scale {
   @if $screen-size == "desktop" {
     @each $size-name, $properties in $font-prop {
@@ -20,5 +21,29 @@
         }
       }
     }
+  }
+}
+
+// ----------------------Navigation
+.logo {
+  a {
+    color: var(--clr-primary-700);
+  }
+}
+nav {
+  ul a {
+    color: var(--clr-neutral-grey-500);
+  }
+}
+
+// ----------------------Landing
+.landing {
+  &__heading {
+    text-align: center;
+    color: var(--clr-neutral-grey-900);
+  }
+  &__desc {
+    text-align: center;
+    color: var(--clr-neutral-grey-500);
   }
 }

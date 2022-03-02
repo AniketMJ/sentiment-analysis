@@ -1,12 +1,20 @@
-@use "./variables" as var;
+@use "../abstracts/variables" as var;
+@use "../abstracts/functions" as func;
 
+// ----------------------General
 @mixin flow($selector, $space: 1.5rem) {
   #{$selector} > * + * {
     margin-top: $space;
   }
 }
 
-/* Media query mixins */
+@mixin box-shadow($clr...) {
+  box-shadow: 0 0 func.px-to-rem(20) 0 rgba(nth($clr, 1), 0.7),
+    0 0 func.px-to-rem(40) func.px-to-rem(2) rgba(nth($clr, 2), 0.7),
+    0 0 func.px-to-rem(50) 0 rgba(nth($clr, 3), 0.8);
+}
+
+// ----------------------Media query mixins
 @mixin respond-to($breakpoint) {
   @if map-has-key(var.$breakpoints, $breakpoint) {
     @media (max-width: map-get(var.$breakpoints, $breakpoint)) {
