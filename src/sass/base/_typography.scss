@@ -1,5 +1,6 @@
 @use "../abstracts/variables" as var;
 @use "../abstracts/mixins" as mix;
+@use "../abstracts/functions" as func;
 
 // ----------------------TypeScale
 @each $screen-size, $font-prop in var.$type-scale {
@@ -45,5 +46,25 @@ nav {
   &__desc {
     text-align: center;
     color: var(--clr-neutral-grey-500);
+  }
+}
+
+// ----------------------Features
+.features {
+  &__heading {
+    color: var(--clr-neutral-grey-900);
+  }
+  &__f__title {
+    color: var(--clr-neutral-grey-800);
+  }
+  &__f__desc {
+    color: var(--clr-neutral-grey-500);
+  }
+}
+
+// ----------------------Product
+.product {
+  &__heading {
+    color: var(--clr-neutral-grey-900);
   }
 }

@@ -1,0 +1,21 @@
+@use "../abstracts/functions" as func;
+
+.footer {
+  .container {
+    margin-top: func.px-to-rem(149);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__sapr {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__details {
+      p {
+        margin-top: func.px-to-rem(40);
+      }
+    }
+  }
+}

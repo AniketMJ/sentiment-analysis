@@ -1,0 +1,119 @@
+@use "../abstracts/functions" as func;
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/variables" as var;
+
+.features {
+  overflow-x: hidden;
+  margin-top: func.px-to-rem(141);
+  padding-bottom: func.px-to-rem(160);
+
+  &__heading {
+    text-align: center;
+    margin-bottom: func.px-to-rem(112);
+  }
+
+  &__all {
+    display: flex;
+    flex-direction: column;
+    gap: func.px-to-rem(96);
+
+    .features__f:first-child {
+      .features__f__icon {
+        background-color: var(--clr-neutral-teal-100);
+        svg {
+          path {
+            fill: var(--clr-neutral-teal-800);
+          }
+        }
+      }
+
+      .features__f__img {
+        margin-right: -15%;
+        @include mix.box-shadow(
+          map-get(var.$colors, neutral-teal, 200),
+          map-get(var.$colors, neutral-teal, 100),
+          map-get(var.$colors, neutral-teal, 100)
+        );
+      }
+    }
+    .features__f:nth-child(2) {
+      .features__f__icon {
+        background-color: var(--clr-neutral-yellow-100);
+        svg {
+          path {
+            fill: var(--clr-neutral-yellow-800);
+          }
+        }
+      }
+
+      .features__f__img {
+        margin-right: -2%;
+
+        @include mix.box-shadow(
+          map-get(var.$colors, neutral-yellow, 200),
+          map-get(var.$colors, neutral-yellow, 100),
+          map-get(var.$colors, neutral-yellow, 100)
+        );
+      }
+    }
+    .features__f:last-child {
+      .features__f__icon {
+        background-color: var(--clr-secondary-100);
+        svg {
+          path {
+            fill: var(--clr-secondary-800);
+          }
+        }
+      }
+
+      .features__f__img {
+        margin-right: -21%;
+
+        @include mix.box-shadow(
+          map-get(var.$colors, secondary, 200),
+          map-get(var.$colors, secondary, 100),
+          map-get(var.$colors, secondary, 100)
+        );
+      }
+    }
+  }
+
+  &__f {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: func.px-to-rem(130);
+
+    &__content {
+      max-width: 40%;
+      margin-left: 10%;
+      display: flex;
+      flex-direction: column;
+      gap: func.px-to-rem(11);
+    }
+
+    &__icon {
+      width: func.px-to-rem(75);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      align-self: flex-start;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      svg {
+        max-width: func.px-to-rem(32);
+        height: auto;
+      }
+    }
+
+    &__img {
+      overflow-x: hidden;
+      border-radius: map-get(var.$border-radius, "large");
+
+      img {
+        min-height: func.px-to-rem(450);
+        width: auto;
+      }
+    }
+  }
+}

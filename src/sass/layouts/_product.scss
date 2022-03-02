@@ -1,0 +1,15 @@
+@use "../abstracts/functions" as func;
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: func.px-to-rem(101);
+  padding-bottom: func.px-to-rem(120);
+  background-color: var(--clr-primary-100);
+
+  button {
+    margin-top: func.px-to-rem(20);
+  }
+}
