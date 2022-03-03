@@ -45,14 +45,14 @@
       margin-top: func.px-to-rem(22);
       display: flex;
 
-      input {
-        flex: 1;
-        border: func.px-to-rem(2) solid var(--clr-neutral-grey-500);
-        border-radius: func.px-to-rem(2) 0 0 func.px-to-rem(4);
-      }
-      button {
-        border-radius: 0 func.px-to-rem(2) func.px-to-rem(4) 0;
-      }
+      // input {
+      //   flex: 1;
+      //   border: func.px-to-rem(2) solid var(--clr-neutral-grey-500);
+      //   border-radius: func.px-to-rem(2) 0 0 func.px-to-rem(4);
+      // }
+      // button {
+      //   border-radius: 0 func.px-to-rem(2) func.px-to-rem(4) 0;
+      // }
     }
   }
 }

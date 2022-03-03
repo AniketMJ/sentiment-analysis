@@ -1,0 +1,35 @@
+@use "../abstracts/functions" as func;
+
+.steps {
+  margin-top: func.px-to-rem(152);
+  padding: func.px-to-rem(108) 0 func.px-to-rem(109) 0;
+  background-color: var(--clr-primary-100);
+
+  &__s {
+    margin-top: func.px-to-rem(18);
+    display: flex;
+    justify-content: space-between;
+
+    &__step {
+      max-width: 40ch;
+      position: relative;
+
+      & + & {
+        &::before {
+          position: absolute;
+          content: "";
+          background-image: url("/assets/icons/right-arrow.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: func.px-to-rem(34);
+          left: -50%;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+      &__desc {
+        margin-top: func.px-to-rem(12);
+      }
+    }
+  }
+}

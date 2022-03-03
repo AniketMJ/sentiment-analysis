@@ -109,11 +109,6 @@
     &__img {
       overflow-x: hidden;
       border-radius: map-get(var.$border-radius, "large");
-
-      img {
-        min-height: func.px-to-rem(450);
-        width: auto;
-      }
     }
   }
 }

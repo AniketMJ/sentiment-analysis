@@ -10,7 +10,7 @@
 
   &--primary {
     @extend .button;
-    color: var(--clr-accent-100);
+    color: #fff;
     background-color: var(--clr-accent-500);
   }
   &--secondary {
@@ -18,9 +18,27 @@
     color: var(--clr-accent-500);
     background-color: var(--clr-accent-100);
   }
+  &--secondary-2 {
+    @extend .button;
+    color: #fff;
+    background-color: var(--clr-secondary-500);
+  }
   &--neutral {
     @extend .button;
     color: var(--clr-neutral-grey-100);
     background-color: var(--clr-neutral-grey-500);
+  }
+}
+
+.textfield-button {
+  display: flex;
+
+  input {
+    flex: 1;
+    border-radius: func.px-to-rem(2) 0 0 func.px-to-rem(4);
+  }
+  button {
+    @extend .button;
+    border-radius: 0 func.px-to-rem(2) func.px-to-rem(4) 0;
   }
 }

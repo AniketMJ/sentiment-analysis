@@ -1,0 +1,14 @@
+@use "../abstracts/functions" as func;
+
+.textfield {
+  border: func.px-to-rem(2) solid;
+  border-radius: func.px-to-rem(2);
+
+  &--neutral {
+    @extend .textfield;
+    border-color: var(--clr-neutral-grey-500);
+  }
+  &--secondary {
+    border-color: var(--clr-accent-500);
+  }
+}
