@@ -18,10 +18,11 @@
     gap: func.px-to-rem(18);
   }
   &__heading {
-    max-width: 60%;
+    max-width: 20ch;
   }
   &__desc {
-    max-width: 45%;
+    max-width: 60%;
+    max-width: 40ch;
   }
 
   &__img {

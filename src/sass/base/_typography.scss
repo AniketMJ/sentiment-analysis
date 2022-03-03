@@ -99,6 +99,9 @@ nav {
   }
 
   &__newsletter {
+    input {
+      color: var(--clr-neutral-grey-700);
+    }
     &__label {
       color: var(--clr-neutral-grey-700);
     }
