@@ -57,6 +57,7 @@
 
         li {
           display: flex;
+          cursor: pointer;
 
           svg {
             width: func.px-to-rem(32);

@@ -62,6 +62,7 @@
 
   &-label {
     margin-left: map-get(var.$custom-checkbox, "gap");
+    cursor: pointer;
     position: relative;
 
     &::before,
