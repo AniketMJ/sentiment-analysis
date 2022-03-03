@@ -3,8 +3,10 @@
 .footer {
   .container {
     margin-top: func.px-to-rem(149);
+    padding-bottom: func.px-to-rem(34);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: func.px-to-rem(26);
   }
 
   &__sapr {
@@ -15,6 +17,41 @@
     &__details {
       p {
         margin-top: func.px-to-rem(40);
+      }
+    }
+
+    &__copyright {
+      margin-top: func.px-to-rem(196);
+      display: flex;
+      align-items: center;
+      gap: func.px-to-rem(6);
+
+      svg {
+        max-width: func.px-to-rem(24);
+        height: auto;
+      }
+    }
+  }
+
+  &__other-links {
+    margin-left: func.px-to-rem(100);
+    ul {
+      margin-top: func.px-to-rem(40);
+    }
+  }
+
+  &__newsletter {
+    &__email {
+      margin-top: func.px-to-rem(22);
+      display: flex;
+
+      input {
+        flex: 1;
+        border: func.px-to-rem(2) solid var(--clr-neutral-grey-500);
+        border-radius: func.px-to-rem(2) 0 0 func.px-to-rem(4);
+      }
+      button {
+        border-radius: 0 func.px-to-rem(2) func.px-to-rem(4) 0;
       }
     }
   }

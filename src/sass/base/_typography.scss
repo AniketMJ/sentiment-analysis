@@ -68,3 +68,39 @@ nav {
     color: var(--clr-neutral-grey-900);
   }
 }
+
+// ----------------------Footer
+.footer {
+  &__sapr {
+    &__details {
+      p {
+        color: var(--clr-neutral-grey-500);
+      }
+    }
+    &__copyright {
+      svg {
+        path {
+          fill: var(--clr-neutral-grey-500);
+        }
+      }
+      p {
+        color: var(--clr-neutral-grey-500);
+      }
+    }
+  }
+
+  &__other-links {
+    p {
+      color: var(--clr-neutral-grey-700);
+    }
+    a {
+      color: var(--clr-neutral-grey-500);
+    }
+  }
+
+  &__newsletter {
+    &__label {
+      color: var(--clr-neutral-grey-700);
+    }
+  }
+}
