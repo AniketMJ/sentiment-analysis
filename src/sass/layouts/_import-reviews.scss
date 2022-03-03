@@ -1,0 +1,50 @@
+@use "../abstracts/functions" as func;
+
+.import-reviews {
+  margin-top: func.px-to-rem(154);
+
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: func.px-to-rem(240);
+
+    > * {
+      flex: 1;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: func.px-to-rem(1);
+      height: 35%;
+      background-color: var(--clr-neutral-grey-400);
+    }
+    &::before {
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &::after {
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .or {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__asin-id {
+    form {
+      label + div {
+        margin-top: func.px-to-rem(31);
+      }
+    }
+  }
+}

@@ -1,6 +1,8 @@
 @use "../abstracts/functions" as func;
 
 header > .container {
+  padding-top: func.px-to-rem(24);
+  padding-bottom: func.px-to-rem(24);
   display: flex;
   justify-content: space-between;
   align-items: center;
