@@ -153,3 +153,39 @@ nav {
     }
   }
 }
+
+// ----------------------Product-reviews
+.product-reviews {
+  &__res {
+    h4 {
+      color: var(--clr-neutral-grey-800);
+    }
+  }
+  &__res-window {
+    &__reviews {
+      .col-header {
+        color: var(--clr-neutral-grey-700);
+      }
+      ul {
+        li {
+          color: var(--clr-neutral-grey-500);
+        }
+      }
+    }
+    &__dates {
+      .col-header {
+        color: var(--clr-neutral-grey-700);
+      }
+      ul {
+        li {
+          color: var(--clr-neutral-grey-500);
+        }
+      }
+    }
+    &__delete {
+      .col-header {
+        color: var(--clr-accent-700);
+      }
+    }
+  }
+}

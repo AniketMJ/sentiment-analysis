@@ -1,0 +1,102 @@
+@use "../abstracts/functions" as func;
+@use "../abstracts/variables" as var;
+
+.checkbox {
+  appearance: none;
+
+  &-input {
+    appearance: none;
+
+    &--primary {
+      @extend .checkbox-input;
+    }
+    &--secondary {
+      @extend .checkbox-input;
+    }
+    &--neutral-grey {
+      @extend .checkbox-input;
+    }
+
+    &:checked {
+      + .checkbox-label {
+        &::before {
+          border: 0;
+        }
+        &::after {
+          background-image: url("/assets/icons/approve-tick.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: map-get(var.$custom-checkbox, "size");
+        }
+
+        &--primary {
+          &::before {
+            background-color: map-get(
+              var.$custom-checkbox,
+              "bg-clr",
+              "primary"
+            );
+          }
+        }
+        &--secondary {
+          &::before {
+            background-color: map-get(
+              var.$custom-checkbox,
+              "bg-clr",
+              "secondary"
+            );
+          }
+        }
+        &--neutral-grey {
+          &::before {
+            background-color: map-get(
+              var.$custom-checkbox,
+              "bg-clr",
+              "neutral-grey"
+            );
+          }
+        }
+      }
+    }
+  }
+
+  &-label {
+    margin-left: map-get(var.$custom-checkbox, "gap");
+    position: relative;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      right: calc(100% + map-get(var.$custom-checkbox, "gap"));
+      top: 0;
+      width: func.px-to-rem(36);
+      aspect-ratio: 1;
+    }
+    &::before {
+      border-radius: map-get(var.$border-radius, "small");
+    }
+
+    &--primary {
+      @extend .checkbox-label;
+      &::before {
+        border: func.px-to-rem(2) solid
+          map-get(var.$custom-checkbox, "border-clr", "primary");
+      }
+    }
+    &--secondary {
+      @extend .checkbox-label;
+      &::before {
+        border: func.px-to-rem(2) solid
+          map-get(var.$custom-checkbox, "border-clr", "secondary");
+      }
+    }
+    &--neutral-grey {
+      @extend .checkbox-label;
+      &::before {
+        border: func.px-to-rem(2) solid
+          map-get(var.$custom-checkbox, "border-clr", "neutral-grey");
+      }
+    }
+  }
+}

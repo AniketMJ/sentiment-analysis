@@ -6,7 +6,7 @@
   margin: 0;
   border: 0;
   padding: func.px-to-rem(16) func.px-to-rem(24);
-  border-radius: map-get(var.$border-radius, "normal");
+  border-radius: map-get(var.$border-radius, "small");
 
   &--primary {
     @extend .button;
@@ -25,7 +25,7 @@
   }
   &--neutral {
     @extend .button;
-    color: var(--clr-neutral-grey-100);
+    color: #fff;
     background-color: var(--clr-neutral-grey-500);
   }
 }

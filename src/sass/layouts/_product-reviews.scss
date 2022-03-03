@@ -1,0 +1,102 @@
+@use "../abstracts/functions" as func;
+@use "../abstracts/variables" as var;
+
+.product-reviews {
+  margin-top: func.px-to-rem(104);
+
+  &__res {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__res-window {
+    margin-top: func.px-to-rem(19);
+    padding: func.px-to-rem(38) func.px-to-rem(90);
+    border: func.px-to-rem(2) solid var(--clr-primary-200);
+    border-radius: map-get(var.$border-radius, "normal");
+    height: func.px-to-rem(512);
+    overflow-y: auto;
+
+    display: grid;
+    grid-template-columns: 7fr repeat(2, 1fr);
+    gap: func.px-to-rem(28);
+
+    .col-header {
+      margin-bottom: func.px-to-rem(4);
+    }
+
+    &__reviews {
+      ul {
+        display: grid;
+        grid-auto-rows: minmax(func.px-to-rem(36), auto);
+        gap: func.px-to-rem(28);
+
+        li {
+          display: flex;
+          gap: func.px-to-rem(22);
+
+          // input {
+          //   appearance: none;
+          //   &:checked {
+          //     + label {
+          //       &::before {
+          //         background-color: var(--clr-secondary-600);
+          //         border: 0;
+          //       }
+          //       &::after {
+          //         background-image: url("/assets/icons/approve-tick.svg");
+          //         background-repeat: no-repeat;
+          //         background-position: center;
+          //         background-size: func.px-to-rem(36);
+          //       }
+          //     }
+          //   }
+          // }
+          // label {
+          //   margin-left: func.px-to-rem(22);
+          //   position: relative;
+          //   &::before,
+          //   &::after {
+          //     position: absolute;
+          //     content: "";
+          //     right: calc(100% + func.px-to-rem(22));
+          //     top: 0;
+          //     width: func.px-to-rem(36);
+          //     aspect-ratio: 1;
+          //   }
+          //   &::before {
+          //     border: func.px-to-rem(2) solid var(--clr-secondary-400);
+          //     border-radius: map-get(var.$border-radius, "small");
+          //   }
+          // }
+        }
+      }
+    }
+
+    &__dates {
+      ul {
+        display: grid;
+        grid-auto-rows: minmax(func.px-to-rem(36), auto);
+        justify-items: center;
+        gap: func.px-to-rem(28);
+      }
+    }
+
+    &__delete {
+      ul {
+        display: grid;
+        grid-auto-rows: minmax(func.px-to-rem(36), auto);
+        justify-items: center;
+        gap: func.px-to-rem(28);
+
+        li {
+          img {
+            width: func.px-to-rem(32);
+            aspect-ratio: 1;
+          }
+        }
+      }
+    }
+  }
+}

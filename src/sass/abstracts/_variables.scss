@@ -1,12 +1,5 @@
 @use "../abstracts/functions" as func;
 
-// ----------------------General
-$border-radius: (
-  large: func.px-to-rem(10),
-  normal: func.px-to-rem(4),
-  small: func.px-to-rem(2),
-);
-
 // ----------------------Breakpoints
 $breakpoints: (
   "small": 600px,
@@ -168,5 +161,26 @@ $colors: (
     700: hsla(48, 78%, 40%, 1),
     800: hsla(46, 83%, 32%, 1),
     900: hsla(45, 86%, 20%, 1),
+  ),
+);
+
+// ----------------------General
+$border-radius: (
+  large: func.px-to-rem(10),
+  normal: func.px-to-rem(4),
+  small: func.px-to-rem(2),
+);
+$custom-checkbox: (
+  gap: func.px-to-rem(22),
+  size: func.px-to-rem(36),
+  border-clr: (
+    primary: map-get($colors, "primary", 400),
+    secondary: map-get($colors, "secondary", 400),
+    neutral-grey: map-get($colors, "neutral-grey", 400),
+  ),
+  bg-clr: (
+    primary: map-get($colors, "primary", 600),
+    secondary: map-get($colors, "secondary", 600),
+    neutral-grey: map-get($colors, "neutral-grey", 600),
   ),
 );
