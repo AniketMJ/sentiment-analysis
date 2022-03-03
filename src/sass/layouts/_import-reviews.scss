@@ -18,8 +18,8 @@
       position: absolute;
       content: "";
       width: func.px-to-rem(1);
-      height: 35%;
-      background-color: var(--clr-neutral-grey-400);
+      height: 45%;
+      background-color: var(--clr-primary-400);
     }
     &::before {
       top: 0;
@@ -33,7 +33,7 @@
     }
   }
 
-  .or {
+  &__separator {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -44,6 +44,34 @@
     form {
       label + div {
         margin-top: func.px-to-rem(31);
+      }
+    }
+  }
+
+  &__drag {
+    &__drag-file {
+      margin-top: func.px-to-rem(31);
+      border: func.px-to-rem(2) dashed var(--clr-primary-200);
+      padding: func.px-to-rem(49);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: func.px-to-rem(8);
+
+      svg {
+        width: func.px-to-rem(128);
+        aspect-ratio: 1;
+        path {
+          fill: var(--clr-primary-400);
+        }
+      }
+
+      p {
+        text-align: center;
+        span {
+          text-decoration: underline;
+        }
       }
     }
   }

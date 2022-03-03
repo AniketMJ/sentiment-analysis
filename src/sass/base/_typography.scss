@@ -25,6 +25,8 @@
   }
 }
 
+// --------------------------------------------Home-page
+
 // ----------------------Navigation
 .logo {
   a {
@@ -108,7 +110,9 @@ nav {
   }
 }
 
-// ----------------------Footer
+// --------------------------------------------Home-page
+
+// ----------------------Steps
 .steps {
   &__heading {
     color: var(--clr-neutral-grey-800);
@@ -120,6 +124,31 @@ nav {
       }
       &__desc {
         color: var(--clr-neutral-grey-500);
+      }
+    }
+  }
+}
+
+// ----------------------Import-reviews
+.import-reviews {
+  &__asin-id {
+    label {
+      color: var(--clr-neutral-grey-800);
+    }
+  }
+
+  &__separator {
+    color: var(--clr-neutral-grey-400);
+  }
+
+  &__drag {
+    h4 {
+      color: var(--clr-neutral-grey-800);
+    }
+
+    &__drag-file {
+      p {
+        color: var(--clr-neutral-grey-600);
       }
     }
   }
