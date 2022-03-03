@@ -35,41 +35,6 @@
         li {
           display: flex;
           gap: func.px-to-rem(22);
-
-          // input {
-          //   appearance: none;
-          //   &:checked {
-          //     + label {
-          //       &::before {
-          //         background-color: var(--clr-secondary-600);
-          //         border: 0;
-          //       }
-          //       &::after {
-          //         background-image: url("/assets/icons/approve-tick.svg");
-          //         background-repeat: no-repeat;
-          //         background-position: center;
-          //         background-size: func.px-to-rem(36);
-          //       }
-          //     }
-          //   }
-          // }
-          // label {
-          //   margin-left: func.px-to-rem(22);
-          //   position: relative;
-          //   &::before,
-          //   &::after {
-          //     position: absolute;
-          //     content: "";
-          //     right: calc(100% + func.px-to-rem(22));
-          //     top: 0;
-          //     width: func.px-to-rem(36);
-          //     aspect-ratio: 1;
-          //   }
-          //   &::before {
-          //     border: func.px-to-rem(2) solid var(--clr-secondary-400);
-          //     border-radius: map-get(var.$border-radius, "small");
-          //   }
-          // }
         }
       }
     }
@@ -91,9 +56,15 @@
         gap: func.px-to-rem(28);
 
         li {
-          img {
+          display: flex;
+
+          svg {
             width: func.px-to-rem(32);
             aspect-ratio: 1;
+
+            path {
+              fill: var(--clr-accent-400);
+            }
           }
         }
       }
