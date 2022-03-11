@@ -7,10 +7,10 @@
 
   &--neutral {
     @extend .textfield;
-    border-color: var(--clr-neutral-grey-500);
+    border-color: var(--clr-neutral-grey-600);
   }
   &--secondary {
     @extend .textfield;
-    border-color: var(--clr-secondary-500);
+    border-color: var(--clr-secondary-600);
   }
 }

@@ -21,9 +21,8 @@
           width: func.px-to-rem(34);
           aspect-ratio: 1;
           background-image: url("/assets/icons/right-arrow.svg");
-          background-repeat: no-repeat;
           background-position: center;
-          background-size: func.px-to-rem(34);
+          background-size: contain;
           left: -33%;
           top: 50%;
           transform: translateY(-50%);

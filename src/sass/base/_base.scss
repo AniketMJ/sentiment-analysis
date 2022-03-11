@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as var;
+@use "../abstracts/functions" as func;
 
 // ----------------------Fonts
 @font-face {
@@ -64,4 +65,23 @@ ul,
 ol {
   margin: 0;
   padding: 0;
+}
+
+// Help icon at right side of the element
+.help-icon {
+  display: inline-block;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: func.px-to-rem(34);
+    aspect-ratio: 1;
+    background-image: url("/assets/icons/help.svg");
+    background-size: contain;
+    top: 0;
+    right: 0;
+    transform: translate(100%, -50%);
+    cursor: pointer;
+  }
 }

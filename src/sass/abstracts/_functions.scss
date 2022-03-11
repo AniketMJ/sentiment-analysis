@@ -3,3 +3,6 @@
 @function px-to-rem($px, $base-font-size: 16) {
   @return math.div($px, $base-font-size) * 1rem;
 }
+@function px-to-em($px, $base-font-size: 16) {
+  @return math.div($px, $base-font-size) * 1em;
+}

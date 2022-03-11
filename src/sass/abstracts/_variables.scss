@@ -2,10 +2,10 @@
 
 // ----------------------Breakpoints
 $breakpoints: (
-  "small": 600px,
-  "medium": 900px,
-  "large": 1200px,
-  "very-large": 1800px,
+  "small": func.px-to-em(600px),
+  "medium": func.px-to-em(900px),
+  "large": func.px-to-em(1200px),
+  "very-large": func.px-to-em(1800px),
 );
 
 // ----------------------Typography

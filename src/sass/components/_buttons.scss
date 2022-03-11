@@ -21,12 +21,12 @@
   &--secondary-2 {
     @extend .button;
     color: #fff;
-    background-color: var(--clr-secondary-500);
+    background-color: var(--clr-secondary-600);
   }
   &--neutral {
     @extend .button;
     color: #fff;
-    background-color: var(--clr-neutral-grey-500);
+    background-color: var(--clr-neutral-grey-600);
   }
 }
 
