@@ -2,101 +2,70 @@
 @use "../abstracts/variables" as var;
 
 .checkbox {
-  appearance: none;
+  display: flex;
+  gap: map-get(var.$custom-checkbox, "gap");
 
-  &-input {
+  input {
+    position: relative;
     appearance: none;
-
-    &--primary {
-      @extend .checkbox-input;
-    }
-    &--secondary {
-      @extend .checkbox-input;
-    }
-    &--neutral-grey {
-      @extend .checkbox-input;
-    }
+    margin: 0;
+    width: map-get(var.$custom-checkbox, "size");
+    aspect-ratio: 1;
+    border: func.px-to-rem(2) solid;
+    border-radius: map-get(var.$border-radius, "small");
+    cursor: pointer;
 
     &:checked {
-      + .checkbox-label {
-        &::before {
-          border: 0;
-        }
-        &::after {
-          background-image: url("/assets/icons/approve-tick.svg");
-          background-repeat: no-repeat;
-          background-position: center;
-          background-size: map-get(var.$custom-checkbox, "size");
-        }
+      border: none;
 
-        &--primary {
-          &::before {
-            background-color: map-get(
-              var.$custom-checkbox,
-              "bg-clr",
-              "primary"
-            );
-          }
-        }
-        &--secondary {
-          &::before {
-            background-color: map-get(
-              var.$custom-checkbox,
-              "bg-clr",
-              "secondary"
-            );
-          }
-        }
-        &--neutral-grey {
-          &::before {
-            background-color: map-get(
-              var.$custom-checkbox,
-              "bg-clr",
-              "neutral-grey"
-            );
-          }
-        }
+      &::before {
+        position: absolute;
+        content: "";
+        inset: 0;
+        background-image: url("/assets/icons/approve-tick.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
       }
     }
   }
-
-  &-label {
-    margin-left: map-get(var.$custom-checkbox, "gap");
+  label {
     cursor: pointer;
-    position: relative;
+  }
 
-    &::before,
-    &::after {
-      position: absolute;
-      content: "";
-      right: calc(100% + map-get(var.$custom-checkbox, "gap"));
-      top: 0;
-      width: func.px-to-rem(36);
-      aspect-ratio: 1;
-    }
-    &::before {
-      border-radius: map-get(var.$border-radius, "small");
-    }
+  &--primary {
+    @extend .checkbox;
 
-    &--primary {
-      @extend .checkbox-label;
-      &::before {
-        border: func.px-to-rem(2) solid
-          map-get(var.$custom-checkbox, "border-clr", "primary");
+    input {
+      border-color: map-get(var.$custom-checkbox, "border-clr", "primary");
+
+      &:checked {
+        background-color: map-get(var.$custom-checkbox, "bg-clr", "primary");
       }
     }
-    &--secondary {
-      @extend .checkbox-label;
-      &::before {
-        border: func.px-to-rem(2) solid
-          map-get(var.$custom-checkbox, "border-clr", "secondary");
+  }
+  &--secondary {
+    @extend .checkbox;
+
+    input {
+      border-color: map-get(var.$custom-checkbox, "border-clr", "secondary");
+
+      &:checked {
+        background-color: map-get(var.$custom-checkbox, "bg-clr", "secondary");
       }
     }
-    &--neutral-grey {
-      @extend .checkbox-label;
-      &::before {
-        border: func.px-to-rem(2) solid
-          map-get(var.$custom-checkbox, "border-clr", "neutral-grey");
+  }
+  &--neutral {
+    @extend .checkbox;
+
+    input {
+      border-color: map-get(var.$custom-checkbox, "border-clr", "neutral-grey");
+
+      &:checked {
+        background-color: map-get(
+          var.$custom-checkbox,
+          "bg-clr",
+          "neutral-grey"
+        );
       }
     }
   }

@@ -16,66 +16,6 @@
     display: flex;
     flex-direction: column;
     gap: func.px-to-rem(96);
-
-    .features__f:first-child {
-      .features__f__icon {
-        background-color: var(--clr-neutral-teal-100);
-        svg {
-          path {
-            fill: var(--clr-neutral-teal-800);
-          }
-        }
-      }
-
-      .features__f__img {
-        margin-right: -15%;
-        @include mix.box-shadow(
-          map-get(var.$colors, neutral-teal, 200),
-          map-get(var.$colors, neutral-teal, 100),
-          map-get(var.$colors, neutral-teal, 100)
-        );
-      }
-    }
-    .features__f:nth-child(2) {
-      .features__f__icon {
-        background-color: var(--clr-neutral-yellow-100);
-        svg {
-          path {
-            fill: var(--clr-neutral-yellow-800);
-          }
-        }
-      }
-
-      .features__f__img {
-        margin-right: -2%;
-
-        @include mix.box-shadow(
-          map-get(var.$colors, neutral-yellow, 200),
-          map-get(var.$colors, neutral-yellow, 100),
-          map-get(var.$colors, neutral-yellow, 100)
-        );
-      }
-    }
-    .features__f:last-child {
-      .features__f__icon {
-        background-color: var(--clr-secondary-100);
-        svg {
-          path {
-            fill: var(--clr-secondary-800);
-          }
-        }
-      }
-
-      .features__f__img {
-        margin-right: -21%;
-
-        @include mix.box-shadow(
-          map-get(var.$colors, secondary, 200),
-          map-get(var.$colors, secondary, 100),
-          map-get(var.$colors, secondary, 100)
-        );
-      }
-    }
   }
 
   &__f {
@@ -90,12 +30,6 @@
       display: flex;
       flex-direction: column;
       gap: func.px-to-rem(11);
-    }
-
-    &:first-child {
-      svg {
-        max-width: func.px-to-rem(32);
-      }
     }
 
     &__icon {
@@ -113,8 +47,70 @@
     }
 
     &__img {
-      overflow-x: hidden;
+      max-width: func.px-to-rem(750);
+      margin-right: func.px-to-rem(-40);
+      overflow: hidden;
       border-radius: map-get(var.$border-radius, "large");
+    }
+
+    &:first-child {
+      .features__f__icon {
+        background-color: var(--clr-neutral-teal-100);
+
+        svg {
+          max-width: func.px-to-rem(32);
+
+          path {
+            fill: var(--clr-neutral-teal-800);
+          }
+        }
+      }
+
+      .features__f__img {
+        @include mix.box-shadow(
+          map-get(var.$colors, neutral-teal, 200),
+          map-get(var.$colors, neutral-teal, 100),
+          map-get(var.$colors, neutral-teal, 100)
+        );
+      }
+    }
+
+    &:nth-child(2) {
+      .features__f__icon {
+        background-color: var(--clr-neutral-yellow-100);
+        svg {
+          path {
+            fill: var(--clr-neutral-yellow-800);
+          }
+        }
+      }
+
+      .features__f__img {
+        @include mix.box-shadow(
+          map-get(var.$colors, neutral-yellow, 200),
+          map-get(var.$colors, neutral-yellow, 100),
+          map-get(var.$colors, neutral-yellow, 100)
+        );
+      }
+    }
+
+    &:last-child {
+      .features__f__icon {
+        background-color: var(--clr-secondary-100);
+        svg {
+          path {
+            fill: var(--clr-secondary-800);
+          }
+        }
+      }
+
+      .features__f__img {
+        @include mix.box-shadow(
+          map-get(var.$colors, secondary, 200),
+          map-get(var.$colors, secondary, 100),
+          map-get(var.$colors, secondary, 100)
+        );
+      }
     }
   }
 }

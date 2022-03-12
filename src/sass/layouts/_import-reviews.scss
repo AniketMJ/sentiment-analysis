@@ -71,9 +71,15 @@
 
       p {
         text-align: center;
-        span {
+        label {
+          color: var(--clr-neutral-grey-800);
           text-decoration: underline;
+          cursor: pointer;
         }
+      }
+
+      #upload-file {
+        display: none;
       }
     }
   }

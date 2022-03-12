@@ -26,7 +26,7 @@
   }
 
   &__img {
-    max-width: 65%;
+    max-width: func.px-to-rem(900);
     overflow: hidden;
     border-radius: map-get(var.$border-radius, "large");
     @include mix.box-shadow(

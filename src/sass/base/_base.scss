@@ -67,7 +67,13 @@ ol {
   padding: 0;
 }
 
-// Help icon at right side of the element
+:focus-visible {
+  outline: func.px-to-rem(2) solid var(--clr-neutral-grey-900);
+  outline-offset: func.px-to-rem(2);
+  border-radius: func.px-to-rem(1);
+}
+
+/* Help icon at top-right side of the element */
 .help-icon {
   display: inline-block;
   position: relative;
@@ -82,6 +88,6 @@ ol {
     top: 0;
     right: 0;
     transform: translate(100%, -50%);
-    cursor: pointer;
+    cursor: help;
   }
 }

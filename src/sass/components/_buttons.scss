@@ -36,9 +36,19 @@
   input {
     flex: 1;
     border-radius: func.px-to-rem(2) 0 0 func.px-to-rem(4);
+
+    &:focus-visible {
+      outline: func.px-to-rem(2) solid var(--clr-neutral-grey-900);
+      outline-offset: func.px-to-rem(-2);
+    }
   }
   button {
     @extend .button;
     border-radius: 0 func.px-to-rem(2) func.px-to-rem(4) 0;
+
+    &:focus-visible {
+      outline: func.px-to-rem(2) solid var(--clr-neutral-grey-900);
+      outline-offset: 0;
+    }
   }
 }

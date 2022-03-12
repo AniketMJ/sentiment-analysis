@@ -1,5 +1,6 @@
 @use "../abstracts/functions" as func;
 @use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
 
 .product-reviews {
   margin-top: func.px-to-rem(104);
@@ -33,8 +34,11 @@
         gap: func.px-to-rem(28);
 
         li {
-          display: flex;
-          gap: func.px-to-rem(22);
+          overflow-x: hidden;
+
+          label {
+            @include mix.truncate;
+          }
         }
       }
     }

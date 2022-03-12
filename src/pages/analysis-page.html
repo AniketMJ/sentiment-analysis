@@ -85,7 +85,9 @@
                         </svg>
 
                         <p class="p1-bold">Drop a file to upload</p>
-                        <p class="p3">or <span>browse</span> to choose a file</p>
+                        <p class="p3">or <label tabindex="0" for="upload-file" aria-label="Upload a file">browse</label>
+                            to choose a file</p>
+                        <input type="file" id="upload-file" accept=".csv">
                     </div>
                 </div>
             </div>
@@ -101,28 +103,30 @@
                 <div class="product-reviews__res-window">
                     <div class="product-reviews__res-window__reviews">
                         <ul role="list">
-                            <li class="col-header">
-                                <input type="checkbox" id="select-all" class="checkbox-input--secondary">
-                                <label for="select-all" class="p2 checkbox-label--secondary">Select all</label>
+                            <li class="col-header checkbox--secondary">
+                                <input type="checkbox" tabindex="-1" id="select-all">
+                                <label for="select-all" class="p2">Select all</label>
                             </li>
-                            <li><input type="checkbox" id="r1" class="checkbox-input--secondary"><label for="r1"
-                                    class="p2 checkbox-label--secondary">Absolutely
+                            <li class="checkbox--secondary"><input type="checkbox" tabindex="-1" id="r1"><label for="r1"
+                                    class="p2">Absolutely
                                     poorly thought out IPD
                                     fitting</label></li>
-                            <li><input type="checkbox" id="r2" class="checkbox-input--secondary"><label for="r2"
-                                    class="p2 checkbox-label--secondary">Perfect
+                            <li class="checkbox--secondary"><input type="checkbox" tabindex="-1" id="r2"><label for="r2"
+                                    class="p2">Perfect
                                     items but not perfect for
                                     people wear glass</label></li>
-                            <li><input type="checkbox" id="r3" class="checkbox-input--secondary"><label for="r3"
-                                    class="p2 checkbox-label--secondary">The best VR
+                            <li class="checkbox--secondary"><input type="checkbox" tabindex="-1" id="r3"><label for="r3"
+                                    class="p2">The
+                                    best VR
                                     headset just keeps
                                     getting better!</label></li>
-                            <li><input type="checkbox" id="r4" class="checkbox-input--secondary"><label for="r4"
-                                    class="p2 checkbox-label--secondary">Has to be
+                            <li class="checkbox--secondary"><input type="checkbox" tabindex="-1" id="r4"><label for="r4"
+                                    class="p2">Has
+                                    to be
                                     one of the worst
                                     experiences ever</label></li>
-                            <li><input type="checkbox" id="r5" class="checkbox-input--secondary"><label for="r5"
-                                    class="p2 checkbox-label--secondary">Facebook
+                            <li class="checkbox--secondary"><input type="checkbox" tabindex="-1" id="r5"><label for="r5"
+                                    class="p2">Facebook
                                     has ruined
                                     Oculus</label></li>
                         </ul>
