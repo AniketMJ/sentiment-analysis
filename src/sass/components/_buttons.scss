@@ -28,6 +28,12 @@
     color: #fff;
     background-color: var(--clr-neutral-grey-600);
   }
+  &--neutral-2 {
+    @extend .button;
+    color: var(--clr-neutral-cool-grey-600);
+    background-color: transparent;
+    border: 2px solid var(--clr-primary-200);
+  }
 }
 
 .textfield-button {

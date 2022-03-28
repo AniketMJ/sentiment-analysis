@@ -1,0 +1,19 @@
+@use "../abstracts/functions" as func;
+
+.chart-sec {
+  margin-top: func.px-to-rem(63);
+
+  &__header {
+    display: flex;
+  }
+  &__download {
+    margin-left: auto;
+    width: func.px-to-rem(74);
+    padding: func.px-to-rem(16) func.px-to-rem(24);
+    background-image: url("/assets/icons/bottom-alignment.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: func.px-to-rem(26);
+    border-radius: func.px-to-rem(2);
+  }
+}

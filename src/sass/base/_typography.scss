@@ -13,7 +13,7 @@
       }
     }
   } @else if $screen-size == "tablet" {
-    @include mix.respond-to("large") {
+    @include mix.respond-to("medium") {
       @each $size-name, $properties in $font-prop {
         .#{$size-name} {
           @each $prop, $value in $properties {
@@ -25,7 +25,7 @@
   }
 }
 
-// --------------------------------------------Home-page
+// --------------------------------------------Index-page
 
 // ----------------------Navigation
 .logo {
@@ -110,7 +110,7 @@ nav {
   }
 }
 
-// --------------------------------------------Home-page
+// --------------------------------------------Analysis-page
 
 // ----------------------Steps
 .steps {
@@ -189,3 +189,7 @@ nav {
     }
   }
 }
+
+// --------------------------------------------Output-page
+
+// ----------------------Chart-sec
