@@ -193,3 +193,19 @@ nav {
 // --------------------------------------------Output-page
 
 // ----------------------Chart-sec
+.chart-sec {
+  margin-top: func.px-to-rem(63);
+
+  &__heading {
+    color: var(--clr-neutral-teal-800);
+  }
+
+  &__month {
+    &__label {
+      color: var(--clr-neutral-teal-600);
+    }
+    &__options {
+      color: var(--clr-neutral-teal-600);
+    }
+  }
+}

@@ -6,10 +6,44 @@
   &__header {
     display: flex;
   }
+
+  &__month {
+    margin-left: func.px-to-rem(88);
+    display: flex;
+    align-items: center;
+    gap: func.px-to-rem(16);
+
+    &__select-wrapper {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: func.px-to-rem(16);
+        margin-right: func.px-to-rem(24);
+        width: func.px-to-rem(26);
+        aspect-ratio: 1;
+        background-image: url("/assets/icons/down-arrow.svg");
+        background-position: center;
+        background-size: contain;
+        pointer-events: none;
+      }
+    }
+
+    &__options {
+      $gapBwLableIcon: func.px-to-rem(28);
+      $iconWidth: func.px-to-rem(26);
+      $paddingRight: func.px-to-rem(24);
+      appearance: none;
+      padding-right: $gapBwLableIcon + $iconWidth + $paddingRight;
+    }
+  }
+
   &__download {
     margin-left: auto;
     width: func.px-to-rem(74);
-    padding: func.px-to-rem(16) func.px-to-rem(24);
     background-image: url("/assets/icons/bottom-alignment.svg");
     background-position: center;
     background-repeat: no-repeat;
