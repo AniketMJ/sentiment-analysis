@@ -50,4 +50,20 @@
     background-size: func.px-to-rem(26);
     border-radius: func.px-to-rem(2);
   }
+
+  &__statistics {
+    margin-top: func.px-to-rem(38);
+
+    ul[role="list"] {
+      display: flex;
+      justify-content: center;
+      gap: func.px-to-rem(28);
+
+      li {
+        $minWidth: func.px-to-rem(200);
+        min-width: $minWidth;
+        text-align: center;
+      }
+    }
+  }
 }
