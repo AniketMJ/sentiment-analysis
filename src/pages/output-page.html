@@ -8,7 +8,8 @@
     <title>Sentiment Analysis</title>
     <link rel="shortcut icon" href="../assets/icons/grinning-face-with-big-eyes.svg" type="image/x-icon">
     <link rel="stylesheet" href="../sass/main.scss">
-    <script src="../js/app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="/js/app.js" defer></script>
 </head>
 
 <body>
@@ -48,7 +49,59 @@
                     <button class="chart-sec__download button--neutral-2"></button>
                 </div>
 
-                <div class="chart-sec__statistics">
+                <div class="chart-sec__results">
+                    <div class="chart-sec__results__charts">
+                        <canvas id="sentiment-chart" width="860" height="495"
+                            aria-label="A line-chart showing the results of sentiment analysis" role="img">
+                            <p>This browser doesn't support canvas element <br> Please update your browser</p>
+                        </canvas>
+                    </div>
+                    <div class="chart-sec__results__meter">
+                        <div class="chart-sec__results__meter__heading">
+                            <h4 class="h4-logo">Sentiment Meter</h4>
+                            <p class="p2">Overall ratings</p>
+                        </div>
+                        <div class="chart-sec__results__meter__curve">
+                            <div class="svg-wrapper">
+                                <svg width="316" height="316" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="percentage-meter" stroke-width="32" stroke-linecap="round">
+                                        <path id="percentage-bg"
+                                            d="M87 280.976A142.001 142.001 0 0 1 158 16a141.999 141.999 0 0 1 71 264.976"
+                                            stroke="#DAF3FB" />
+                                        <path id="percentage-curve"
+                                            d="M87 280.976A142.001 142.001 0 0 1 158 16a141.999 141.999 0 0 1 71 264.976"
+                                            stroke="#032363" />
+                                    </g>
+                                </svg>
+                                <div class="chart-sec__results__meter__per">
+                                    <div class="emoji-wrapper">
+                                        <div class="chart-sec__results__meter__emoji"></div>
+                                        <p class="p2 highest-percentage-label">Positive</p>
+                                    </div>
+                                    <h3 class="h3-oblik highest-percentage">68.4%</h3>
+                                </div>
+                            </div>
+
+                            <div class="chart-sec__results__meter__stats">
+                                <div class="stat">
+                                    <h4 class="h4-logo lowest-percentage">
+                                        11.2%
+                                    </h4>
+                                    <p class="p2 lowest-percentage-labels">Negative</p>
+                                </div>
+                                <div class="stat">
+                                    <h4 class="h4-logo lowest-percentage">
+                                        20%
+                                    </h4>
+                                    <p class="p2 lowest-percentage-labels">Neutral</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="chart-sec__stats">
                     <ul role="list">
                         <li class="button--neutral-2">
                             <h4 class="h4-logo">1,233</h4>
@@ -71,6 +124,55 @@
             </div>
         </section>
     </main>
+
+    <template id="data">
+        <span id="total-reviews">12</span>
+        <span id="positive-percentage">68.4</span>
+        <span id="negative-percentage">11.2</span>
+        <span id="neutral-percentage">20</span>
+        <ul id="positive-reviews">
+            <li>30</li>
+            <li>25</li>
+            <li>20</li>
+            <li>5</li>
+            <li>6</li>
+            <li>45</li>
+            <li>15</li>
+            <li>11</li>
+            <li>20</li>
+            <li>2</li>
+            <li>10</li>
+            <li>2</li>
+        </ul>
+        <ul id="negative-reviews">
+            <li>20</li>
+            <li>15</li>
+            <li>11</li>
+            <li>30</li>
+            <li>60</li>
+            <li>8</li>
+            <li>25</li>
+            <li>2</li>
+            <li>10</li>
+            <li>1</li>
+            <li>5</li>
+            <li>6</li>
+        </ul>
+        <ul id="neutral-reviews">
+            <li>2</li>
+            <li>10</li>
+            <li>1</li>
+            <li>5</li>
+            <li>6</li>
+            <li>60</li>
+            <li>8</li>
+            <li>25</li>
+            <li>20</li>
+            <li>15</li>
+            <li>11</li>
+            <li>30</li>
+        </ul>
+    </template>>
 
     <footer class="footer">
         <div class="container">

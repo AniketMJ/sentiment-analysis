@@ -209,7 +209,36 @@ nav {
     }
   }
 
-  &__statistics {
+  &__results {
+    &__meter {
+      &__heading {
+        h4 {
+          color: var(--clr-neutral-grey-800);
+        }
+        p {
+          color: var(--clr-neutral-grey-500);
+        }
+      }
+
+      &__curve {
+        h3 {
+          text-transform: capitalize;
+          color: var(--clr-neutral-grey-800);
+        }
+        h4 {
+          text-transform: capitalize;
+          color: var(--clr-neutral-grey-800);
+        }
+        p {
+          text-transform: capitalize;
+
+          color: var(--clr-neutral-grey-500);
+        }
+      }
+    }
+  }
+
+  &__stats {
     margin-top: func.px-to-rem(38);
 
     li {

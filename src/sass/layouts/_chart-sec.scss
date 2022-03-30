@@ -51,7 +51,102 @@
     border-radius: func.px-to-rem(2);
   }
 
-  &__statistics {
+  &__results {
+    margin-top: func.px-to-rem(22);
+    display: flex;
+    gap: func.px-to-rem(20);
+
+    #sentiment-chart {
+      background-color: white;
+    }
+
+    &__meter {
+      flex: 1;
+
+      &__heading {
+        p {
+          margin-top: func.px-to-rem(4);
+        }
+      }
+
+      &__curve {
+        margin: 0 func.px-to-rem(47);
+        margin-top: func.px-to-rem(17);
+        text-align: center;
+      }
+
+      #percentage-curve {
+        --dashOffset: 0;
+        stroke-dasharray: 743;
+        stroke-dashoffset: 743;
+        animation: animateStroke 2s ease-in-out forwards;
+      }
+      @keyframes animateStroke {
+        to {
+          stroke-dashoffset: var(--dashOffset);
+        }
+      }
+
+      .svg-wrapper {
+        position: relative;
+      }
+      &__per {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .emoji-wrapper {
+        p {
+          margin-top: func.px-to-rem(11);
+        }
+      }
+      &__emoji {
+        width: func.px-to-rem(58);
+        aspect-ratio: 1;
+        background-image: url("/assets/icons/grinning-face-with-big-eyes.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        margin: 0 auto;
+
+        &.positive {
+          background-image: url("/assets/icons/grinning-face-with-big-eyes.svg");
+        }
+        &.neutral {
+          background-image: url("/assets/icons/neutral-face.svg");
+        }
+        &.negative {
+          background-image: url("/assets/icons/slightly-frowning-face.svg");
+        }
+      }
+
+      &__stats {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+
+        &::before {
+          position: absolute;
+          content: "";
+          top: 0;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: func.px-to-rem(2);
+          background-color: var(--clr-primary-400);
+        }
+
+        .stat {
+          p {
+            margin-top: func.px-to-rem(3);
+          }
+        }
+      }
+    }
+  }
+
+  &__stats {
     margin-top: func.px-to-rem(38);
 
     ul[role="list"] {
